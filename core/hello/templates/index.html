@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/site.css'%}" type="text/css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="head">
+    </div>
+
+    <div class="Display">
+        <form method="post" action="postuser/">
+            {% csrf_token %}
+
+            <div class="Vvod">
+                <div class="dataInput">
+                    Ввод данных
+                </div>
+
+                <div class="block1">
+                    <div class="tip">
+
+
+                        <label for="inc-select">Тип проишествия:</label>
+                        <select name="inc" id="inc-select">
+                            <option value="">-- Выберите проишествие --</option>
+                            <option name="Дтп">ДТП</option>
+                            <option name="Пожар">Пожар</option>
+                        </select>
+
+
+                    </div>
+                    <div class="weatherStation">
+
+                        <label for="city-select">Метеостанция:</label>
+                        <select name="weatherStation" id="city-select">
+                            <option value="">-- Выберите метеостанцию --</option>
+                            <option name="petersburg">Березники</option>
+                            <option name="samara">Верещягино</option>
+                            <option name="perm">Губаха</option>
+                            <option name="novosibirsk">Добрянка</option>
+                            <option name="petersburg">Кудымкар</option>
+                            <option name="samara">Кунгур</option>
+                            <option name="perm">Лысва</option>
+                            <option name="novosibirsk">Оса</option>
+                            <option name="petersburg">Оханск</option>
+                            <option name="samara">Пермь</option>
+                            <option name="perm">Чайковский</option>
+                            <option name="novosibirsk">Чердынь</option>
+                            <option name="samara">Чермоз</option>
+                            <option name="perm">Чернушка</option>
+                            <option name="novosibirsk">Бисер</option>
+                            <option name="petersburg">Вая</option>
+                            <option name="samara">Гайны</option>
+                            <option name="perm">Октябрский</option>
+                            <option name="novosibirsk">Большая сосновая</option>
+                            <option name="samara">Коса</option>
+                            <option name="perm">Кочёво</option>
+                            <option name="novosibirsk">Ножовка</option>
+
+                        </select>
+
+                    </div>
+                    <div class="district">
+
+                        <label for="district">Район:</label>
+                        <select name="district" id="district-select">
+                            <option value="">-- Выберите район --</option>
+                            <option name="Alexander">Александровский МО </option>
+                            <option name="Bardymsky">Бардымский МО</option>
+                            <option name="Berezovsky">Березовский МО</option>
+                            <option name="Bolshesosnovsky">Большесосновский МО</option>
+                            <option name="Vereshchaginsky">Верещагинский ГО</option>
+                            <option name="Gaynsky MO">Гайнский МО</option>
+                            <option name="GO city of Berezniki">ГО город Березники</option>
+                            <option name="GO city of Kizel">ГО город Кизел</option>
+                            <option name="Gornozavodsky GO">Горнозаводский ГО</option>
+                            <option name="Gubakhinsky MO">Губахинский МО </option>
+                            <option name="Dobryansky GO">Добрянский ГО</option>
+                            <option name="Yusvinsky MO">Юсьвинский МО</option>
+                            <option name="Yurlinsky MO">Юрлинский МО</option>
+                            <option name="Chusovskaya GO"> Чусовской ГО</option>
+                            <option name="Chernushinsky GO">Чернушинский ГО</option>
+                            <option name="Cherdynsky GO">Чердынский ГО</option>
+                            <option name="Chastinsky MO"> Частинский МО</option>
+                            <option name="Tchaikovsky GO">Чайковский ГО</option>
+                            <option name="Uinsky MO">Уинский МО</option>
+                            <option name="Suksun GO">Суксунский ГО</option>
+                            <option name="Solikamsk GO">Соликамский ГО</option>
+                            <option name="Sivinsky MO">Сивинский МО</option>
+                            <option name="Perm MO"> Пермский МО</option>
+                            <option name="Perm GO">Пермский ГО</option>
+                            <option name="Ochersky GO">Очерский ГО</option>
+                            <option name="Ohansky GO">Оханский ГО</option>
+                            <option name="Osinsky GO">Осинский ГО</option>
+                            <option name="Ordinsky MO">Ординский МО</option>
+                            <option name="October GO">Октябрьский ГО</option>
+                            <option name="Nytvensky GO"> Нытвенский ГО</option>
+                            <option name="Lysvensky GO">Лысьвенский ГО</option>
+                            <option name="Kungursky MO">Кунгурский МО</option>
+                            <option name="Kuedinsky MO">Куединский МО</option>
+                            <option name="Kudymkarsky MO"> Кудымкарский МО</option>
+                            <option name="Krasnokamsky GO">Краснокамский ГО</option>
+                            <option name="Krasnovishersky GO">Красновишерский ГО</option>
+                            <option name="Yelovsky MO">Еловский МО</option>
+                            <option name="Nomadic MO">Кочевский МО</option>
+                            <option name="Kosinsky MO">Косинский МО</option>
+                            <option name="Kishertsky MO">Кишертский МО</option>
+                            <option name="Stellar">ЗАТО Звездный</option>
+                            <option name="Karagay MO">Карагайский МО</option>
+                            <option name="Ilyinsky GO">Ильинский ГО</option>
+                        </select>
+
+
+                    </div>
+
+                    <div class="typePrecipitation">
+
+                        <label for="city-select">Тип осадков:</label>
+
+                        <select name="typePrecipitation" id="city-select">
+                            <option value="">-- Выберите тип осадков --</option>
+                            <option name="petersburg">Гроза с дождём.</option>
+                            <option name="samara">Ливень.</option>
+                            <option name="perm">Дождь.</option>
+                            <option name="novosibirsk">Перемещающиеся осадки</option>
+                            <option name="petersburg">Морось.</option>
+                            <option name="samara">Никаких особых явлений не наблюдалось.</option>
+                            <option name="perm">Песчанная или пыльная буря или снежная низовая метель.</option>
+                            <option name="novosibirsk">Перемещающиеся осадки.</option>
+                            <option name="samara">Пониженная видимость.</option>
+                            <option name="perm">Снег или дождь со снегом.</option>
+                            <option name="novosibirsk">Туман или ледяной туман или сильная мгла.</option>
+                            <option name="novosibirsk">Облака покрывали более половины неба в течение всего
+                                соответствующего периода. </option>
+                            <option name="novosibirsk">Облака покрывали более половины неба в течение одной
+                                части
+                                соответствующего периода
+
+                            </option>
+                            <option name="novosibirsk">Облака покрывали половину неба или менее в течение всего
+                                соответствующего периода. </option>
+                        </select>
+                        <input type="submit" value="Спрогнозировать" />
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="block2">
+
+                    <div class="pressure">
+
+
+                        <label for="totalAmt">Скорость ветра:</label>
+                        <input name="windSpeed" type="number" step="0.01" id="totalAmt">
+
+
+                    </div>
+                    <div class="data">
+                        <label for="city-select">Дата прогназируемого события:</label>
+                        <input type="date" id="start" name="data" value="2018-07-22" />
+                    </div>
+
+
+
+                    <div class="temp">
+                        <label for="totalAmt">Температура воздуха:</label>
+                        <input name="airTemperature" type="number" step="0.01" id="totalAmt">
+                    </div>
+                    <div class="humidity">
+                        <label for="totalAmt">Относительная влажность воздуха:</label>
+                        <input name="Humidity" type="number" step="0.1" id="totalAmt" min="0">
+
+
+                    </div>
+                    <div class="image">
+                        <img class="d-block" src="{% static 'img/logo.png' %}" alt="photo">
+                    </div>
+                </div>
+
+
+            </div>
+
+        </form>
+
+
+
+
+        <div class="conclusion">
+
+
+
+
+            <div class="outputData">
+                Выходные данные
+            </div>
+
+            
+
+
+
+            <div class="probability">
+                <div class="probabilityFire:">
+                    Вероятность проиществия:<p>{{probabilityFire}}</p>
+                </div>
+
+               
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
